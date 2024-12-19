@@ -285,15 +285,14 @@ body {
     }
 
     .contenedorSkills {
-        list-style-type: none;
         display: flex;
-
-        flex-wrap: wrap;
+       
         justify-content: space-between;
         align-items: center;
-        margin: 15vh 0vh 15vh 0vh;
-        width: 100vh;
-        height: 0.2vh;
+        margin: 5rem 0rem 10rem 0rem;
+        max-width: 100%;
+        width: 65rem;
+        height: 0.15rem;
 
         background-image: linear-gradient(to left, transparent 0%, rgba(0, 178, 233, 0.8) 2%, rgb(206, 11, 11, 0.8) 98%, transparent 100%);
         border-top: 1px solid var(--mi-color-border);
@@ -307,23 +306,32 @@ body {
             align-items: center;
             justify-content: center;
             position: relative;
-            bottom: 2.5vh;
-
-
+           
+           
+          
             img {
                 object-fit: cover;
                 max-width: 5vh;
                 max-height: 5vh;
+                position:absolute;
+                border-radius: 100%;
+                transition: 0.4s;
+                margin: 10rem;
+                &:hover {
+                    max-width: 3.2rem;
+                    max-height:3.2rem;
+                    transition: 0.3s;
+                }
+    
             }
             p {
-                margin: 0%;
+                position: relative;
+                top:2rem;
+                font-size: 0.8rem;
             }
 
 
-            .chackaIcon {
-                /* para arreglar lo bordes de ESTE icono */
-                border-radius: 100%;
-            }
+          
         }
 
     }
