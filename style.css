@@ -11,7 +11,7 @@
     --mi-color-terciario: rgba(0, 81, 185, 0.9808298319327731);
     --mi-color-border: rgba(245, 245, 245, 0.18);
     --mi-color-background: rgba(0, 0, 0, 0.620);
-    --mi-color-sahdow: rgba(248, 197, 27,0.9);
+    --mi-color-sahdow: rgba(248, 197, 27, 0.8);
 
 }
 
@@ -39,29 +39,28 @@ body {
         margin: 2vh;
     }
 
+    /* Letra principal de cada titulo */
     .letraPrincipal {
         color: var(--mi-color-primario);
-
     }
 
+    /* titulo + subtitulo */
     .contenedorTitulo {
         padding: 20vh;
         width: 100%;
         text-align: center;
-        background-color: var(--mi-color-background);
-        mask: linear-gradient(rgb(0, 0, 0) 70%, transparent);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, transparent);
 
+        /* Brian Sabatini */
         h1 {
             font-size: 13vh;
             text-shadow: -6px 3px 8px black;
             font-family: "Saira Stencil One", serif;
             font-weight: 400;
             font-style: normal;
-
-
-
         }
 
+        /* Porfolio */
         .contenedorSubtitulo {
             font-size: 6vh;
             text-shadow: -2px 5px 5px black;
@@ -75,104 +74,105 @@ body {
             transition: 0.2s;
 
             &:hover {
-                text-shadow: -1px 3px 5px  var(--mi-color-sahdow);
+                text-shadow: -1px 3px 5px var(--mi-color-sahdow);
                 transition: 0.3s;
                 color: var(--mi-color-sahdow);
             }
         }
+    }
 
-        .contenedorLogos {
+    .contenedorBotones {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        max-width: 100%;
+        position: relative;
+        bottom: 5vh;
+        left: 2vh;
+
+        .btnRows {
             display: flex;
-            justify-content: space-between;
-            max-width: 100%;
+            width: 16vh;
+            margin-top: 1vh;
+            justify-content: space-evenly;
+            position: relative;
+            background-color: rgba(238, 130, 238, 0.3);
+            border: solid 1px var(--mi-color-border);
+            transition: 0.3s;
 
-            .pack-logo {
-                margin: -3vh;
-
-                .logosbackground {
-                    display: flex;
-                    width: 15vh;
-                    margin-top: 1vh;
-                    justify-content: space-evenly;
-                    position: relative;
-                    background-color: rgba(238, 130, 238, 0.3);
-                    border: solid 1px var(--mi-color-border);
-
-                    .btnLink {
-                        width: 4.5vh;
-                        height: 4.5vh;
-                        background-image: url(./iconos/LinkedIn.png);
-                        background-size: cover;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        border-radius: 100%;
-
-                        &:hover {
-                            box-shadow:  0px 0px 10px 1px var(--mi-color-sahdow);
-                            transition: 0.3s
-                        }
-                    }
-
-                    .btnGitHub {
-                        width: 4.5vh;
-                        height: 4.5vh;
-                        background-image: url(./iconos/github.png);
-                        background-size: cover;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        border-radius: 100%;
-
-                        &:hover {
-                            box-shadow:  0px 0px 10px 1px var(--mi-color-sahdow);
-                            transition: 0.3s
-                        }
-                    }
-
-                    .btnTelefono {
-                        width: 4.5vh;
-                        height: 4.5vh;
-                        background-image: url(./iconos/telefono.png);
-                        background-size: cover;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        border-radius: 100%;
-
-                        &:hover {
-                            box-shadow:  0px 0px 10px 1px var(--mi-color-sahdow);
-                            transition: 0.3s
-                        }
-                    }
-
-                    .btnGmail {
-                        width: 4.5vh;
-                        height: 4.5vh;
-                        background-image: url(./iconos/mail.png);
-                        background-size: cover;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        border-radius: 100%;
-                        
-                        &:hover {
-                            box-shadow:  0px 0px 10px 1px var(--mi-color-sahdow);
-                            transition: 0.3s
-                        }
-                    }
-
-                }
-
+            &:hover {
+                width: 20vh;
+                transition: 0.3s
             }
 
+            .btnLink {
+                width: 4.5vh;
+                height: 4.5vh;
+                background-image: url(./iconos/LinkedIn.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+
+                &:hover {
+                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    transition: 0.3s
+                }
+            }
+
+            .btnGitHub {
+                width: 4.5vh;
+                height: 4.5vh;
+                background-image: url(./iconos/github.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+
+                &:hover {
+                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    transition: 0.3s
+                }
+            }
+
+            .btnTelefono {
+                width: 4.5vh;
+                height: 4.5vh;
+                background-image: url(./iconos/telefono.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+
+                &:hover {
+                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    transition: 0.3s
+                }
+            }
+
+            .btnGmail {
+                width: 4.5vh;
+                height: 4.5vh;
+                background-image: url(./iconos/mail.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+
+                &:hover {
+                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    transition: 0.3s
+                }
+            }
         }
     }
 
+    /* Sobre mi + foto */
     .contenedorPresentacion {
         display: flex;
         flex-wrap: wrap;
         width: 130vh;
         justify-content: center;
-
-
-
 
         p {
             font-size: 2.1vh;
@@ -182,7 +182,6 @@ body {
             overflow-y: scroll;
             border-radius: 1%;
             box-shadow: -10px 10px 20px 1px rgba(0, 0, 0, 0.2);
-
         }
 
         img {
@@ -190,6 +189,12 @@ body {
             height: 40vh;
             border-radius: 50%;
             mask-image: linear-gradient(rgb(0, 0, 0) 80%, transparent);
+
+            &:hover {
+                mask-image: none;
+                box-shadow: 0px 0px 10px 0px var(--mi-color-sahdow);
+                transition: 0.5s;
+            }
         }
     }
 
@@ -198,17 +203,12 @@ body {
         flex-wrap: wrap;
         flex-direction: row;
         gap: 2vh;
-
-
         justify-content: space-evenly;
         margin: 2vh;
-
-
 
         .proyecto {
             display: flex;
             flex-direction: column;
-
             width: 20vh;
             height: 25vh;
             align-items: center;
@@ -240,8 +240,6 @@ body {
 
             }
 
-
-
             .skills {
                 display: flex;
                 margin-top: auto;
@@ -255,8 +253,6 @@ body {
                     margin: 0.5vh;
                     justify-content: space-around;
                 }
-
-
             }
         }
     }
@@ -293,7 +289,7 @@ body {
     }
 }
 
-/* Ocultar scroll bar */
+/* Ocultar scroll bar de los parrafos */
 p::-webkit-scrollbar {
     display: none;
 }
