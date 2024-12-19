@@ -46,18 +46,28 @@ body {
 
     /* titulo + subtitulo */
     .contenedorTitulo {
-        padding: 20vh;
+        padding: 30vh 0vh 10vh 0vh;
         width: 100%;
         text-align: center;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, transparent);
 
         /* Brian Sabatini */
         h1 {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap ;
             font-size: 13vh;
             text-shadow: -6px 3px 8px black;
             font-family: "Saira Stencil One", serif;
             font-weight: 400;
             font-style: normal;
+            transition: 1s;
+
+            &:hover {
+                font-size: 13.5vh;
+                transition: 0.3s;
+
+            }
         }
 
         /* Porfolio */
@@ -65,13 +75,13 @@ body {
             font-size: 6vh;
             text-shadow: -2px 5px 5px black;
             position: relative;
-            left: 32vh;
+            left: 30.8vh;
             bottom: 8.7vh;
             color: var(--mi-color-primario);
             font-family: "Parisienne", serif;
             font-weight: 400;
             font-style: normal;
-            transition: 0.2s;
+            transition: 1s;
 
             &:hover {
                 text-shadow: -1px 3px 5px var(--mi-color-sahdow);
@@ -98,7 +108,7 @@ body {
             position: relative;
             background-color: rgba(238, 130, 238, 0.3);
             border: solid 1px var(--mi-color-border);
-            transition: 0.3s;
+            transition: 0.4s;
 
             &:hover {
                 width: 20vh;
@@ -129,9 +139,10 @@ body {
                 background-repeat: no-repeat;
                 border-radius: 100%;
 
+
                 &:hover {
                     box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
-                    transition: 0.3s
+                    transition: 0.5s
                 }
             }
 
@@ -171,11 +182,12 @@ body {
     .contenedorPresentacion {
         display: flex;
         flex-wrap: wrap;
-        width: 130vh;
+        width: auto;
+        margin: 2vh;
         justify-content: center;
 
         p {
-            font-size: 2.1vh;
+            font-size: 1.1rem;
             max-width: 90vh;
             height: 40vh;
             border-radius: 0%;
@@ -184,15 +196,19 @@ body {
             box-shadow: -10px 10px 20px 1px rgba(0, 0, 0, 0.2);
         }
 
-        img {
+        .fotoPerfil {
             width: 40vh;
             height: 40vh;
             border-radius: 50%;
+            margin: 1.5vh;
             mask-image: linear-gradient(rgb(0, 0, 0) 80%, transparent);
+            transition: 1s;
 
             &:hover {
                 mask-image: none;
                 box-shadow: 0px 0px 10px 0px var(--mi-color-sahdow);
+                width: 40.5vh;
+                height: 40.5vh;
                 transition: 0.5s;
             }
         }
@@ -209,24 +225,32 @@ body {
         .proyecto {
             display: flex;
             flex-direction: column;
-            width: 20vh;
-            height: 25vh;
+            width: 12rem;
+            height: 15rem;
             align-items: center;
             margin: 1vh;
             border: solid 1px var(--mi-color-border);
-            box-shadow: -6px 6px 10px 1px rgba(0, 0, 0, 0.8);
+            box-shadow: -6px 1px 10px 1px rgba(0, 0, 0, 0.8);
+            transition: all 0.6s;
+
+            &:hover {
+                box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                width: 12.5rem;
+
+                transition: all 0.3s;
+            }
 
             img {
                 object-fit: cover;
-                width: 20vh;
-                height: 10vh;
-                mask-image: linear-gradient(rgb(0, 0, 0) 10%, transparent);
+                width: 12rem;
+                height: 6.2rem;
+                mask-image: linear-gradient(rgb(0, 0, 0) 63%, transparent);
             }
 
             h4 {
                 position: relative;
                 bottom: 1vh;
-                font-size: x-large;
+                font-size: 1.5rem;
                 color: aliceblue;
                 text-shadow: 0px 0px 4px var(--mi-color-primario);
                 background-color: rgba(0, 0, 0, 0.4);
@@ -235,6 +259,7 @@ body {
             }
 
             p {
+                font-size: 0.9rem;
                 text-align: center;
                 margin: 0vh 1.5vh 0vh 1.5vh;
 
@@ -247,9 +272,11 @@ body {
                 align-items: center;
                 border: solid 1px var(--mi-color-border);
                 margin-bottom: 1vh;
+               
 
-                span {
-                    list-style: none;
+                img {
+                   width: 1.5rem;
+                   height: 1.5rem;
                     margin: 0.5vh;
                     justify-content: space-around;
                 }
@@ -260,21 +287,45 @@ body {
     .contenedorSkills {
         list-style-type: none;
         display: flex;
-        background-color: var(--mi-color-background);
-        border: solid 1px var(--mi-color-border);
-        width: 100vh;
-        height: 20vh;
+
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        margin: 2.5vh;
+        margin: 15vh 0vh 15vh 0vh;
+        width: 100vh;
+        height: 0.2vh;
 
-        p {
-            margin: 1.5vh;
+        background-image: linear-gradient(to left, transparent 0%, rgba(0, 178, 233, 0.8) 2%, rgb(206, 11, 11, 0.8) 98%, transparent 100%);
+        border-top: 1px solid var(--mi-color-border);
+        border-bottom: 1px solid var(--mi-color-border);
+
+
+        li {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: 2.5vh;
+
+
+            img {
+                object-fit: cover;
+                max-width: 5vh;
+                max-height: 5vh;
+            }
+            p {
+                margin: 0%;
+            }
+
+
+            .chackaIcon {
+                /* para arreglar lo bordes de ESTE icono */
+                border-radius: 100%;
+            }
         }
 
-        img {
-            object-fit: cover;
-        }
     }
 
     footer {
