@@ -33,7 +33,7 @@ body {
     border: solid 2px var(--mi-color-border);
     color: rgba(245, 245, 245, 0.95);
     box-shadow: -1px 2px 10px 2px rgba(0, 0, 0, 0.8);
-  
+
     overflow-x: hidden;
 
     h3 {
@@ -53,13 +53,14 @@ body {
         width: 100%;
         text-align: center;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, transparent);
+
         /* ajustes para que se vea bien en movil */
-            @media screen and (max-width: 600px) {
-            padding: 10vh 0vh 10vh 0vh;  
+        @media screen and (max-width: 640px) {
+            padding: 10vh 0vh 10vh 0vh;
         }
-          /* ajustes para que se vea bien en movil */
-          @media screen and (max-width: 600px) {
-            padding: 15vh 0vh 10vh 0vh;  
+
+        @media screen and (max-width: 1024px) {
+            padding: 15vh 0vh 10vh 0vh;
         }
 
         /* Brian Sabatini */
@@ -70,7 +71,7 @@ body {
             flex-wrap: nowrap;
             word-wrap: break-word;
             width: 100%;
-            font-size:  6.5vw;
+            font-size: 6.5vw;
             text-shadow: -6px 3px 8px black;
             font-family: "Saira Stencil One", serif;
             font-weight: 400;
@@ -82,12 +83,14 @@ body {
                 transition: 0.3s;
 
             }
-            /* ajustes para que se vea bien en movil */
-            @media screen and (max-width: 600px) {
-                font-size:  10.5vw;
+
+            /* ajustes para que se vea bien en smartphone */
+            @media screen and (max-width: 640px) {
+                font-size: 10.5vw;
             }
-            @media screen and (max-width: 900px) {
-                font-size:  10.5vw;
+
+            @media screen and (max-width: 1024px) {
+                font-size: 10.5vw;
             }
         }
 
@@ -109,20 +112,27 @@ body {
                 transition: 0.3s;
                 color: var(--mi-color-sahdow);
             }
-            @media screen and (max-width: 600px) {
-                font-size:  8.5vw;
+
+            /* ajustes para que se vea bien en smartphone */
+            @media screen and (max-width: 1024px) {
+                font-size: 4.5vw;
+                left: 25.2vw;
+                bottom: 6.5vw;
             }
+
         }
     }
 
     .contenedorBotones {
         width: 100%;
         display: flex;
-        flex-direction:column ;
+        flex-direction: column;
         align-items: end;
         position: relative;
         left: 1.5vh;
-       
+
+
+
         .btnRows {
             display: flex;
             width: 16vh;
@@ -138,10 +148,13 @@ body {
                 transition: 0.3s
             }
 
+
+
+            /* botones */
             .btnLink {
+                background-image: url(./iconos/LinkedIn.png);
                 width: 4.5vh;
                 height: 4.5vh;
-                background-image: url(./iconos/LinkedIn.png);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -150,29 +163,38 @@ body {
                 &:hover {
                     box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
                     transition: 0.3s
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: 3.5vh;
+                    height: 3.5vh;
                 }
             }
 
             .btnGitHub {
+                background-image: url(./iconos/github.png);
                 width: 4.5vh;
                 height: 4.5vh;
-                background-image: url(./iconos/github.png);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
                 border-radius: 100%;
 
-
                 &:hover {
                     box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
-                    transition: 0.5s
+                    transition: 0.3s
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: 3.5vh;
+                    height: 3.5vh;
                 }
             }
 
             .btnTelefono {
+                background-image: url(./iconos/telefono.png);
                 width: 4.5vh;
                 height: 4.5vh;
-                background-image: url(./iconos/telefono.png);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -182,12 +204,17 @@ body {
                     box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
                     transition: 0.3s
                 }
+
+                @media screen and (max-width: 640px) {
+                    width: 3vh;
+                    height: 3vh;
+                }
             }
 
             .btnGmail {
+                background-image: url(./iconos/mail.png);
                 width: 4.5vh;
                 height: 4.5vh;
-                background-image: url(./iconos/mail.png);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -196,6 +223,11 @@ body {
                 &:hover {
                     box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
                     transition: 0.3s
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: 3vh;
+                    height: 3vh;
                 }
             }
         }
@@ -218,6 +250,13 @@ body {
             overflow-y: scroll;
             border-radius: 1%;
             box-shadow: -11px 10px 10px -7px rgba(0, 0, 0, 0.2);
+
+            @media screen and (max-width: 640px) {
+                height: 30vh;
+                font-size: 0.9rem;
+                word-wrap: break-word;
+                width: 35vh;
+            }
         }
 
         .fotoPerfil {
@@ -228,6 +267,10 @@ body {
             mask-image: linear-gradient(rgb(0, 0, 0) 80%, transparent);
             transition: 0.5s;
 
+            @media screen and (max-width: 640px) {
+                width: 30vh;
+                height: 30vh;
+            }
 
             &:hover {
                 mask-image: none;
@@ -370,10 +413,10 @@ body {
             justify-content: center;
             align-items: center;
             margin: 4vh;
-            
+
             .contenedorFormularioTexto {
                 width: 65vh;
-               
+                margin: 10vh;
                 .letraPrincipal {
                     margin: 2vh 1vh 0, 2vh 2vh;
                     font-size: 1.5rem;
@@ -396,14 +439,15 @@ body {
             }
 
             form {
-               
-                width: 55vh; display: flex;
+
+                width: 55vh;
+                display: flex;
 
                 ul {
                     margin: 0.5vh;
                     width: 85vw;
-                     display: flex;
-                     flex-direction: column;
+                    display: flex;
+                    flex-direction: column;
                     list-style-type: none;
                     text-align: start;
                     font-family: "Saira Stencil One", serif;
@@ -430,7 +474,8 @@ body {
                         background-color: var(--mi-color-card);
                         font-family: "Saira Stencil One", serif;
                         font-size: 1.1vh;
-                        color:rgba(245, 245, 245, 0.9);
+                        color: rgba(245, 245, 245, 0.9);
+
                         &:hover {
                             box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
                             transition: 0.3s
@@ -442,6 +487,13 @@ body {
         }
     }
 }
+
+
+
+
+
+
+
 
 /* Ocultar scroll bar de los parrafos */
 p::-webkit-scrollbar {
