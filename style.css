@@ -51,6 +51,10 @@ body {
         width: 100%;
         text-align: center;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, transparent);
+        @media screen and (max-width: 600px) {
+            padding: 10vh 0vh 10vh 0vh;
+            
+        }
 
         /* Brian Sabatini */
         h1 {
@@ -58,8 +62,9 @@ body {
             justify-content: center;
             display: flex;
             flex-wrap: nowrap;
-
-            font-size: 6.5vw;
+            word-wrap: break-word;
+            width: 100%;
+            font-size:  6.5vw;
             text-shadow: -6px 3px 8px black;
             font-family: "Saira Stencil One", serif;
             font-weight: 400;
@@ -71,6 +76,10 @@ body {
                 transition: 0.3s;
 
             }
+            @media screen and (max-width: 600px) {
+                font-size:  10.5vw;
+            }
+    
         }
 
         /* Porfolio */
@@ -91,18 +100,20 @@ body {
                 transition: 0.3s;
                 color: var(--mi-color-sahdow);
             }
+            @media screen and (max-width: 600px) {
+                font-size:  8.5vw;
+            }
         }
     }
 
     .contenedorBotones {
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction:column ;
         align-items: end;
-        max-width: 100%;
         position: relative;
-        bottom: 5vh;
-        left: 2vh;
-
+        left: 1.5vh;
+       
         .btnRows {
             display: flex;
             width: 16vh;
