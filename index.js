@@ -67,7 +67,7 @@ let proyectos = [
 ];
 
 proyectos.forEach((proyecto) => {
-  console.log(proyecto);
+  
   document.getElementsByClassName("contenedorPorfolio")[0].innerHTML += `
     <div class="proyecto">
         <img  src="${proyecto.imagen}" alt="${proyecto.titulo}">
@@ -82,4 +82,26 @@ proyectos.forEach((proyecto) => {
         
     </div>
     `;
+});
+
+//llamar al telefono
+document.getElementById("callButton").addEventListener("click", function () {
+  const phoneNumber = "+541125315506"; // Número de teléfono que quieres copiar
+
+  // Copiar el número al portapapeles
+  navigator.clipboard
+    .writeText(phoneNumber)
+    .then(() => {
+      console.log("Número copiado al portapapeles:", phoneNumber);
+
+      // Llamar al número usando el esquema "tel:"
+      window.location.href = `tel:${phoneNumber}`;
+    })
+    .catch((err) => {
+      console.error("Error al copiar el número:", err);
+    });
+});
+// ir al formulario
+document.getElementById("scrollButton").addEventListener("click", function () {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 });

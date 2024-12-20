@@ -348,11 +348,11 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 2vh;
+            margin: 4vh;
             
             .contenedorFormularioTexto {
-                width: 60vh;
-                
+                width: 65vh;
+               
                 .letraPrincipal {
                     margin: 2vh 1vh 0, 2vh 2vh;
                     font-size: 1.5rem;
@@ -364,7 +364,7 @@ body {
                 }
 
                 .gracias {
-
+                    margin: 2vh;
                     font-size: 1rem;
                     text-align: center;
                     font-family: "Saira Stencil One", serif;
@@ -375,10 +375,13 @@ body {
             }
 
             form {
-                display: flex;
-                width: max-content;
+               
+                width: 55vh; display: flex;
 
                 ul {
+                    width: 55vh;
+                     display: flex;
+                     flex-direction: column;
                     list-style-type: none;
                     text-align: start;
                     font-family: "Saira Stencil One", serif;
@@ -387,6 +390,8 @@ body {
 
 
                     input {
+                        width: 90%;
+                        min-width: 20vw;
                         background-color: var(--mi-color-background);
                         color: aliceblue;
                         padding: 0.4vh;
