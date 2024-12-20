@@ -386,13 +386,21 @@ body {
                     max-height: 6.5vh;
                     transition: 0.3s;
                 }
-
+                
+                    
+                @media screen and (max-width: 640px) {  
+                    max-width: 3vh;
+                    max-height: 3vh;
+                }
             }
 
             p {
                 position: relative;
                 top: 3.8vh;
                 font-size: 0.8rem;
+                @media screen and (max-width: 640px) {  
+                    font-size: 0.5rem;
+                }
             }
         }
     }
@@ -453,7 +461,9 @@ body {
                     font-family: "Saira Stencil One", serif;
                     font-weight: 400;
                     font-style: normal;
-
+                  @media screen and (max-width: 640px) {
+                    margin-bottom: 20vh;
+                  }
 
                     input {
                         width: 90%;
