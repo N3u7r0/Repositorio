@@ -73,13 +73,16 @@ proyectos.forEach((proyecto) => {
         <img  src="${proyecto.imagen}" alt="${proyecto.titulo}">
         <h4>${proyecto.titulo}</h4>
         <p>${proyecto.descripcion}</p>
-      
+
         <div class="skills">
             <img  src="${proyecto.skillA}">
            <img  src="${proyecto.skillB}">
            <img  src="${proyecto.skillC}">
         </div>
-        
+         <div class="linksCard">
+          <a  href="${proyecto.linkApp}">App</a>
+          <a  href="${proyecto.linkRepo}"> Repositorio</a>
+        </div>
     </div>
     `;
 });
