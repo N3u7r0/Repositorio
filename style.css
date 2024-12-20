@@ -53,9 +53,13 @@ body {
         width: 100%;
         text-align: center;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, transparent);
-        @media screen and (max-width: 600px) {
-            padding: 10vh 0vh 10vh 0vh;
-            
+        /* ajustes para que se vea bien en movil */
+            @media screen and (max-width: 600px) {
+            padding: 10vh 0vh 10vh 0vh;  
+        }
+          /* ajustes para que se vea bien en movil */
+          @media screen and (max-width: 600px) {
+            padding: 15vh 0vh 10vh 0vh;  
         }
 
         /* Brian Sabatini */
@@ -78,10 +82,13 @@ body {
                 transition: 0.3s;
 
             }
+            /* ajustes para que se vea bien en movil */
             @media screen and (max-width: 600px) {
                 font-size:  10.5vw;
             }
-    
+            @media screen and (max-width: 900px) {
+                font-size:  10.5vw;
+            }
         }
 
         /* Porfolio */
