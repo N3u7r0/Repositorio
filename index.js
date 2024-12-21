@@ -1,9 +1,10 @@
 class Porfolio {
-  constructor(titulo, descripcion, imagen, link, skillA, skillB, skillC) {
+  constructor(titulo, descripcion, imagen, linkRepo, linkApp, skillA, skillB, skillC) {
     this.titulo = titulo;
     this.descripcion = descripcion;
     this.imagen = imagen;
-    this.link = link;
+    this.linkRepo = linkRepo;
+    this.linkApp = linkApp;
     this.skillA = skillA;
     this.skillB = skillB;
     this.skillC = skillC;
@@ -23,6 +24,7 @@ let proyectos = [
     "8-Bits",
     "App react destinada a guardar Roms y emuladores de video juegos",
     "./images/8bits.jpg",
+    "https://github.com/N3u7r0/8bits-reactJs",
     "link 1",
     skillReact,
     skillJavaScript,
@@ -32,7 +34,8 @@ let proyectos = [
     "Guitar-on",
     "E- comerce de react de instuementos musicales",
     "./images/Guitar-on.jpg",
-    "link 2",
+    "https://github.com/N3u7r0/guitarOn",
+    "link 1",
     skillReact,
     skillChackra,
     skillJavaScript
@@ -41,7 +44,8 @@ let proyectos = [
     "checkIn Js",
     "app de javascript vanila",
     "./images/checkin-js.jpg",
-    "link 3",
+    "https://github.com/N3u7r0/MarketJs",
+    "link 1",
     skillHtml,
     skillCss,
     skillJavaScript
@@ -50,7 +54,8 @@ let proyectos = [
     "calculadora",
     "Simple calculadora de javascript",
     "./images/calculadora.jpg",
-    "link 4",
+    "https://github.com/N3u7r0/calculadora",
+    "link 1",
     skillHtml,
     skillCss,
     skillJavaScript
@@ -59,7 +64,8 @@ let proyectos = [
     "Curriculum Vitae",
     "mi curriculum vitae echo con estilos propios",
     "./images/cv.jpg",
-    "link 5",
+    "https://github.com/N3u7r0/CurriculumVitae",
+    "link 1",
     skillHtml,
     skillCss,
     skillJavaScript
@@ -70,6 +76,10 @@ proyectos.forEach((proyecto) => {
   
   document.getElementsByClassName("contenedorPorfolio")[0].innerHTML += `
     <div class="proyecto">
+    <div class="linksCard">
+          <a class="linkApp" href="${proyecto.linkApp}">APP</a>
+          <a  class="linkRepo" href="${proyecto.linkRepo}">git-hub</a>
+        </div>
         <img  src="${proyecto.imagen}" alt="${proyecto.titulo}">
         <h4>${proyecto.titulo}</h4>
         <p>${proyecto.descripcion}</p>
@@ -79,10 +89,7 @@ proyectos.forEach((proyecto) => {
            <img  src="${proyecto.skillB}">
            <img  src="${proyecto.skillC}">
         </div>
-         <div class="linksCard">
-          <a  href="${proyecto.linkApp}">App</a>
-          <a  href="${proyecto.linkRepo}"> Repositorio</a>
-        </div>
+         
     </div>
     `;
 });

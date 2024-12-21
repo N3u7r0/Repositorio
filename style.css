@@ -338,19 +338,21 @@ body {
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                bottom: 12vh;
+                top: 1vh;
+
                 a {
 
- 
-                    font-family: "Saira Stencil One", serif;   
+
+                    font-family: "Saira Stencil One", serif;
                     font-size: 0%;
                     text-align: center;
-                   text-decoration: none;
-                    color: var(--mi-color-primaro); 
-                    
-                    transition: all 0.25s; 
+                    text-decoration: none;
+                    background-image: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.8) 20%, rgba(34, 16, 1, 0.3) 80%, transparent 100%);
+                    color: var(--mi-color-primaro);
                     text-shadow: var(--mi-color-sahdow) 1px 1px 2px;
-    
+
+                    transition: all 0.25s;
+
 
 
                 }
@@ -359,13 +361,11 @@ body {
             }
 
             &:hover .linksCard a {
-                font-size: 2rem;
-                
-                text-shadow: var(--mi-color-sahdow) 1px 1px 2px;
-                padding: 2vh;
-                margin: 0.2vh;
+                font-size: 1.5rem;
+                color: rgba(155, 155, 155, 0.7);
+                padding: 0.1vh;
+                margin: 0.9vh;
 
-                
             }
 
             .skills {
@@ -384,7 +384,6 @@ body {
                     justify-content: space-around;
                 }
             }
-
 
             /* este hover es para q resalte los links de la card */
             &:hover {
